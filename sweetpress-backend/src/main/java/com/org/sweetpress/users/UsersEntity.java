@@ -14,8 +14,8 @@ import javax.persistence.*;
 public class UsersEntity {
 
     @Id
-    @Column(name = "userId", nullable = false)
-    private Long userId;
+    @Column(name = "id", nullable = false)
+    private Long id;
 
     @Column(name = "firstName", nullable = false)
     private String firstName;
@@ -34,8 +34,12 @@ public class UsersEntity {
 
     // define relation to order item, email, and cart
 
-    public Long getUserId() {
-        return userId;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -81,7 +85,7 @@ public class UsersEntity {
     @Override
     public String toString() {
         return "UsersEntity{" +
-                "userId=" + userId +
+                "userId=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +

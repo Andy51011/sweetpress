@@ -1,6 +1,5 @@
 package com.org.sweetpress.users;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,14 +9,13 @@ public class UsersServiceImpl implements UsersService{
 
     private final UsersRepository usersRepository;
 
-    @Autowired
     public UsersServiceImpl(UsersRepository usersRepository) {
         this.usersRepository = usersRepository;
     }
 
     @Override
     public void createUser(UsersEntity usersEntity) {
-        UsersEntity newUser = new UsersEntity(usersEntity.getUserId(),
+        UsersEntity newUser = new UsersEntity(usersEntity.getId(),
                 usersEntity.getFirstName(),
                 usersEntity.getEmail(),
                 usersEntity.getLastName(),
@@ -27,23 +25,28 @@ public class UsersServiceImpl implements UsersService{
     }
 
     @Override
-    public void updateUser(Long id, UsersEntity usersEntity) {
-//        usersRepository.deleteById(id);
+    public boolean updateUser(Long userId, UsersEntity usersEntity) {
+        UsersEntity currUser = usersRepository.getReferenceById(Math.toIntExact(userId));
+        if (currUser.getFirstName() != null) {
+            usersRepository.save(usersEntity);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public void deleteUser(Long id) {
-        usersRepository.deleteById(Math.toIntExact(id))
-
+        usersRepository.deleteById(Math.toIntExact(id));
     }
 
     @Override
-    public void getUser(Long id) {
-        usersRepository.findAllById(id);
+    public List<UsersEntity> getUser(String id) {
+      return usersRepository.findAllById(Long.valueOf(id));
     }
 
     @Override
-    public List<UsersEntity> getAllUser() {
+    public List<UsersEntity> getAllUsers() {
         return usersRepository.findAll();
     }
 }
