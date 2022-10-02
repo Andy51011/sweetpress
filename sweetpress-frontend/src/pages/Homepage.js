@@ -4,6 +4,7 @@ import Catering from '../components/catering/Catering';
 import Footer from '../components/footer/Footer';
 import Logo_Nav from '../components/logo_nav/Logo_Nav';
 import Navbar from '../components/navbar/Navbar';
+import Visit_Us from '../components/visit_us/Visit_Us';
 
 const Homepage = () => {
 
@@ -12,6 +13,7 @@ const Homepage = () => {
             <Logo_Nav />
             <Banner />
             <Catering />
+            <Visit_Us />
             <Footer />
         </div>
     )

@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "oakland cafe",
+        "address": "288 11th street ste. d, oakland ca 94607",
+        "image_url": "https://s.yimg.com/fz/api/res/1.2/CepPVkNta2p6z5ie8QF08g--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0xODA7cHhvZmY9MDtweW9mZj0wO3E9ODA7dz0yNTc-/https://s.yimg.com/bj/902b/902b554d944dca936d35889489c90a39.jpg",
+        "active": true
+    },
+    {
+        "id": 2,
+        "name": "el cerrito farmer's market",
+        "address": "307 el cerrito plz. el cerrito, ca 94530",
+        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/8iBClbXgyaerMPuDM8n4oA/o.jpg",
+        "active": false
+    },
+    {
+        "id": 4,
+        "name": "foodieland night market",
+        "address": "1100 eastshore hwy, berkeley ca 94710",
+        "image_url": "https://tse1.mm.bing.net/th?id=OIP.BMrTqkXpVxQDIpcFfdfryAHaC4&pid=Api&P=0",
+        "active": false
+    },
+    {
+        "id": 5,
+        "name": "626 night market",
+        "address": "4501 pleasontaon ave, pleasanton ca 94566",
+        "image_url": "https://tse1.mm.bing.net/th?id=OIP.AD2q7wv2KSxC9apa3BkkNwHaHa&pid=Api&P=0",
+        "active": false
+    }
+]
