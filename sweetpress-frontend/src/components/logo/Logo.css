@@ -1,0 +1,13 @@
+.logo_container {
+    width:500px;
+    display:block;
+    text-align:center;
+    padding:7px;
+    margin:10px;
+    /* background-color:red; */
+}
+
+.logo_container > p {
+    margin-top:-20px;
+    margin-left: 70px;
+}
