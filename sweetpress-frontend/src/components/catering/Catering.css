@@ -1,0 +1,22 @@
+.catering_container {
+    background-color:#FA8072;
+    display:flex;
+    flex-direction:row;
+}
+
+.catering_info {
+    display:flex;
+    flex-direction:column;
+    width:90%;
+    text-align:center;
+    align-items:center;
+    margin:auto;
+}
+
+.contact_button {
+    width:150px;
+    padding:15px;
+    border-radius:20px;
+    color:white;
+    background-color:black;
+}
