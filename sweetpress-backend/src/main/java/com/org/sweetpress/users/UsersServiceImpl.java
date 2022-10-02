@@ -14,19 +14,24 @@ public class UsersServiceImpl implements UsersService{
     }
 
     @Override
-    public void createUser(UsersEntity usersEntity) {
-        UsersEntity newUser = new UsersEntity(usersEntity.getId(),
-                usersEntity.getFirstName(),
-                usersEntity.getEmail(),
-                usersEntity.getLastName(),
-                usersEntity.getUsername(),
-                usersEntity.getPassword());
-        usersRepository.save(usersEntity);
+    public boolean createUser(UsersEntity usersEntity) {
+        if (usersEntity.getId() != null) {
+            UsersEntity newUser = new UsersEntity(usersEntity.getId(),
+                    usersEntity.getFirstName(),
+                    usersEntity.getEmail(),
+                    usersEntity.getLastName(),
+                    usersEntity.getUsername(),
+                    usersEntity.getPassword());
+            usersRepository.save(usersEntity);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
-    public boolean updateUser(Long userId, UsersEntity usersEntity) {
-        UsersEntity currUser = usersRepository.getReferenceById(Math.toIntExact(userId));
+    public boolean updateUser(String userId, UsersEntity usersEntity) {
+        UsersEntity currUser = usersRepository.getReferenceById(Integer.valueOf(userId));
         if (currUser.getFirstName() != null) {
             usersRepository.save(usersEntity);
             return true;

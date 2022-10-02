@@ -30,11 +30,15 @@ public class UsersController {
     // create
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void newUser(@RequestBody UsersEntity usersEntity) {
-        usersServiceImpl.createUser(usersEntity);
+    public boolean newUser(@RequestBody UsersEntity usersEntity) {
+        return usersServiceImpl.createUser(usersEntity);
     }
 
     // update
+    @PutMapping(value = "/{id}")
+    public boolean updateUser(@PathVariable String id, @RequestBody UsersEntity usersEntity) {
+        return usersServiceImpl.updateUser(id, usersEntity);
+    }
 
     // delete
 }
