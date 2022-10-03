@@ -21,7 +21,8 @@ public class UsersServiceImpl implements UsersService{
                     usersEntity.getEmail(),
                     usersEntity.getLastName(),
                     usersEntity.getUsername(),
-                    usersEntity.getPassword());
+                    usersEntity.getPassword(),
+                    usersEntity.getCart());
             usersRepository.save(usersEntity);
             return true;
         } else {

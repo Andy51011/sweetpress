@@ -1,12 +1,13 @@
 package com.org.sweetpress.users;
 
+import com.org.sweetpress.cart.CartEntity;
+import com.org.sweetpress.orderItem.OrderItemEntity;
 import lombok.*;
 import org.hibernate.Hibernate;
+import org.hibernate.annotations.ValueGenerationType;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -16,29 +17,33 @@ import java.util.Objects;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="users")
+@Table(name="user")
 public class UsersEntity {
 
     @Id
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Integer id;
 
-    @Column(name = "firstName", nullable = false)
+    @Column(name = "firstName")
     private String firstName;
 
-    @Column(name = "lastName", nullable = false)
+    @Column(name = "lastName")
     private String lastName;
     // reference email entity
-    @Column(name = "email", nullable = false)
+    @Column(name = "email")
     private String email;
 
-    @Column(name = "username", nullable = false)
+    @Column(name = "username")
     private String username;
 
-    @Column(name = "password", nullable = false)
+    @Column(name = "password")
     private String password;
 
     // define relation to order item, email, and cart
+    @OneToOne
+    @JoinColumn(name = "cartId", referencedColumnName = "cart_id")
+    private CartEntity cart;
 
 
 }

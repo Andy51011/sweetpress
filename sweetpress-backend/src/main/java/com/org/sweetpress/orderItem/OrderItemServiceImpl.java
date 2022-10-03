@@ -17,11 +17,12 @@ public class OrderItemServiceImpl implements OrderItemService {
     @Override
     public boolean createOrderItem(OrderItemEntity orderItemEntity) {
         OrderItemEntity newOrderItemEntity = new OrderItemEntity(
-                orderItemEntity.getOrderItemId(),
+                orderItemEntity.getId(),
                 orderItemEntity.getItemName(),
                 orderItemEntity.getItemQuantity(),
                 orderItemEntity.getItemDesc(),
-                orderItemEntity.getItemPrice());
+                orderItemEntity.getItemPrice(),
+                orderItemEntity.getCart());
         orderItemRepository.save(newOrderItemEntity);
         return true;
     }
@@ -40,7 +41,6 @@ public class OrderItemServiceImpl implements OrderItemService {
     @Override
     public void deleteOrderItem(Long id) {
         orderItemRepository.deleteById(Math.toIntExact(id));
-
     }
 
     @Override

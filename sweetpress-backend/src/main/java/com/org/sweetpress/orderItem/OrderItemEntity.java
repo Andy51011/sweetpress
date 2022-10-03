@@ -1,11 +1,14 @@
 package com.org.sweetpress.orderItem;
 
+import com.org.sweetpress.cart.CartEntity;
+import com.org.sweetpress.users.UsersEntity;
 import lombok.*;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -32,5 +35,9 @@ public class OrderItemEntity {
 
     @Column(name="itemPrice", nullable=false)
     private BigDecimal itemPrice;
+
+    @ManyToOne
+    @JoinColumn(name="cart_id", nullable=false)
+    private CartEntity cart;
 
 }
