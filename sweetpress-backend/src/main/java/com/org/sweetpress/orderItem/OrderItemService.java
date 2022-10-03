@@ -9,7 +9,7 @@ public interface OrderItemService {
     // patch
 
     // bool?
-    void deleteOrderItem(Long id);
+    boolean deleteOrderItem(Long id);
 
     List<OrderItemEntity> getOrderItem(String id);
     List<OrderItemEntity> getAllOrderItems();

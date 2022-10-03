@@ -14,7 +14,6 @@ import java.util.Objects;
 @Getter
 @Setter
 @ToString
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name="user")

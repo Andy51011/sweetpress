@@ -39,8 +39,9 @@ public class OrderItemServiceImpl implements OrderItemService {
     }
 
     @Override
-    public void deleteOrderItem(Long id) {
+    public boolean deleteOrderItem(Long id) {
         orderItemRepository.deleteById(Math.toIntExact(id));
+        return true;
     }
 
     @Override
