@@ -19,23 +19,23 @@ function App() {
       <p>Sugarcane Juice</p>
       </div>
         <div className='nav_container'>
-          <div style={{ margin: '10px' }}>
-            <NavLink to="/" style={({ isActive }) => ({ color: isActive ? 'greenyellow' : 'white' })}>
+          <div style={{ margin: '10px', fontSize: '25px'}}>
+            <NavLink to="/" end style={({ isActive }) => ({ color: isActive ? 'tomato' : 'black', fontWeight: isActive ? '700' : 'lighter' })}>
               Home
             </NavLink>
           </div>
-          <div style={{ margin: '10px' }}>
-            <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? 'greenyellow' : 'white' })}>
+          <div style={{ margin: '10px', fontSize: '25px' }}>
+            <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? 'tomato' : 'black', fontWeight: isActive ? '700' : 'lighter'  })}>
               About
             </NavLink>
           </div>
-          <div style={{ margin: '10px' }}>
-          <NavLink to="/menu" style={({ isActive }) => ({ color: isActive ? 'greenyellow' : 'white' })}>
+          <div style={{ margin: '10px', fontSize: '25px' }}>
+          <NavLink to="/menu" style={({ isActive }) => ({ color: isActive ? 'tomato' : 'black', fontWeight: isActive ? '700' : 'lighter'  })}>
             Menu
           </NavLink>
         </div>
-          <div style={{ margin: '10px' }}>
-            <NavLink to="/contact" style={({ isActive }) => ({ color: isActive ? 'greenyellow' : 'white' })}>
+          <div style={{ margin: '10px', fontSize: '25px' }}>
+            <NavLink to="/contact" style={({ isActive }) => ({ color: isActive ? 'tomato' : 'black', fontWeight: isActive ? '700' : 'lighter'  })}>
               Contact
             </NavLink>
           </div>

@@ -7,12 +7,18 @@
   display:flex;
   flex-direction:row;
   flex-wrap:wrap;
-  background-color:gray;
+  /* background-color:black; */
   width:60%;
   text-align:center;
   justify-content:space-evenly;
   margin:30px;
-  height:8vh;
+  /* height:8vh; */
+  height:auto;
+}
+
+a {
+  text-decoration:none;
+  border-bottom:3px double black;
 }
 
 .straighten_container {
