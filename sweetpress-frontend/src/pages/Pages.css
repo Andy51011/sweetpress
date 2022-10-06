@@ -34,3 +34,14 @@
     flex-direction:row;
     justify-content:center;
 }
+
+.positioning {
+    display:flex;
+    flex-direction:row;
+    width: 80%;
+}
+
+.about_info {
+    width:600px;
+    margin: auto;
+}
