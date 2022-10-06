@@ -1,11 +1,15 @@
 .footer__container {
-    background-color:azure;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    margin-top: 15vh;
-    border-top: 10px double darkgreen;
-    font-size:15px;
-    padding:50px;
+  background-color: azure;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 15vh;
+  border-top: 10px double darkgreen;
+  font-size: 15px;
+  padding: 50px;
+  bottom: 0em;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
 }

@@ -1,14 +1,9 @@
 package com.org.sweetpress.users;
 
 import com.org.sweetpress.cart.CartEntity;
-import com.org.sweetpress.orderItem.OrderItemEntity;
 import lombok.*;
-import org.hibernate.Hibernate;
-import org.hibernate.annotations.ValueGenerationType;
 
 import javax.persistence.*;
-import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Getter
@@ -38,6 +33,8 @@ public class UsersEntity {
 
     @Column(name = "password")
     private String password;
+
+    // access level
 
     // define relation to order item, email, and cart
     @OneToOne
