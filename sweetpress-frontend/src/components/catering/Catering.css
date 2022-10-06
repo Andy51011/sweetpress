@@ -2,12 +2,14 @@
     background-color:#FA8072;
     display:flex;
     flex-direction:row;
+    margin-top:70px;
+    width:100%;
 }
 
 .catering_info {
     display:flex;
     flex-direction:column;
-    width:90%;
+    width:auto;
     text-align:center;
     align-items:center;
     margin:auto;

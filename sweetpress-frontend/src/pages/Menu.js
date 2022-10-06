@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../components/footer/Footer";
+import MenuImage from "../images/menu.png";
 import "./Pages.css";
 
 const Menu = () => {

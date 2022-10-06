@@ -1,15 +1,32 @@
 .footer__container {
-  background-color: azure;
+  background-color: rgb(49, 40, 40);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* margin-top: 15vh; */
+  /* border-top: 10px double darkgreen; */
+  font-size: 15px;
+  padding: 100px;
+}
+
+.social_links {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 15vh;
-  border-top: 10px double darkgreen;
-  font-size: 15px;
-  padding: 50px;
-  bottom: 0em;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
+}
+.social_links > a {
+  border-bottom: 0px !important;
+}
+
+.instagramSocial {
+  margin: 10px;
+}
+
+.footer__title {
+  font-size: 30px;
+  border: 5px inset white;
+  padding: 10px 40px 0px 40px;
 }
