@@ -11,7 +11,9 @@ const Menu = () => {
         <p className="menu_subtitle">try our winter special matcha lattes</p>
         <button className="menu_btn">Download our menu</button>
       </div>
-      <div className="menu_image"></div>
+      <div className="menu_image">
+        <img src={MenuImage} width='70%' />
+      </div>
       <div className="menu_banner_container">
         <p className="menu_title">OUR FOOD</p>
         <p className="menu_subtitle">try our seasonal sweets</p>

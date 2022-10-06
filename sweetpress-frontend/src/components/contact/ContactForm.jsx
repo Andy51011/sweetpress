@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import "./ContactForm.css";
 import { CONTACT_API_KEY } from "./ContactApiKey";
+import KimDrinks from '../../images/kim_drinks.jpeg';
 
 export const ContactForm = () => {
   const onSubmit = async (event) => {
@@ -30,6 +31,10 @@ export const ContactForm = () => {
   };
 
   return (
+    <div className='contact__container'>
+    <div className='img__positioning'>
+    <img src={KimDrinks} width='300' height='400'/>
+
     <form onSubmit={onSubmit}>
       <div className="contact__title">
         <div className="title__contact">Contact Us</div>
@@ -53,5 +58,7 @@ export const ContactForm = () => {
         Submit Form
       </button>
     </form>
+    </div>
+    </div>
   );
 };

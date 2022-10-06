@@ -1,10 +1,18 @@
+.contact__container {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  /* background-color:blue; */
+  margin:50px;
+}
 form {
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); */
   max-width: 480px;
   padding: 0px 12px;
   height: 400px;
+  /* background-color:blue; */
 }
 
 .contact__title {
@@ -73,4 +81,11 @@ label {
 input {
   font-size: 1em;
   height: 2rem;
+}
+
+
+.img__positioning {
+  display:flex;
+  flex-direction:row;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
