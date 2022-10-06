@@ -1,33 +1,32 @@
 import React from "react";
 import axios from "axios";
 import "./ContactForm.css";
+import { CONTACT_API_KEY } from "./ContactApiKey";
 
 export const ContactForm = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "access key here");
+    formData.append("access_key", CONTACT_API_KEY);
 
-    //convert to obj
     const object = Object.fromEntries(formData);
-
-    //
     const json = JSON.stringify(object);
 
-    const res = await axios
-      .post("https://api.web3forms.com/submit", {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: json,
+    let axiosConfig = {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    };
+    await axios
+      .post("https://api.web3forms.com/submit", json, axiosConfig)
+      .then((res) => {
+        console.log("Successfully submitted:", res);
       })
-      .then((res) => res.json());
-    //TODO: modal pop up for success sent?
-    if (res.success) {
-      console.log("Success", res);
-    }
+      .catch((err) => {
+        console.log("Error occurred while submitting form: ", err);
+      });
   };
 
   return (
