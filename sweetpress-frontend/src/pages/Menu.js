@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from '../components/footer/Footer';
+import MenuImage from '../images/menu.png';
 import './Pages.css';
 
 const Menu = () => {
@@ -12,7 +13,7 @@ const Menu = () => {
                 <button className='menu_btn'>Download our menu</button>
             </div>
             <div className='menu_image'>
-
+                <img src={MenuImage} width='70%' />
             </div>
             <div className='menu_banner_container'>
             <p className='menu_title'>OUR FOOD</p>

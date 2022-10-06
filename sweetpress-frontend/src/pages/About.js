@@ -8,7 +8,7 @@ const About = () => {
     return (
         <div>
             <div className='about_container'>
-            <h2>Our Team</h2>
+            <h2 className='menu_title'>OUR TEAM</h2>
             <hr height= '100px' />
             <div className='RD'>
                 <h2>R&D</h2>
