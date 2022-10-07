@@ -13,8 +13,10 @@ jobs:
         uses: actions/checkout@main
       - name: Install Dependencies
         run: npm install
+        working-directory: sweetpress-frontend
       - name: Build
         run: npm run build-prod
+        working-directory: sweetpress-frontend
       - name: Archive Production Artifact
         uses: actions/upload-artifact@main
         with:
