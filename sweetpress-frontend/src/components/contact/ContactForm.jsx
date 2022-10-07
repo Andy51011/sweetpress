@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import "./ContactForm.css";
 import { CONTACT_API_KEY } from "./ContactApiKey";
-import KimDrinks from '../../images/kim_drinks.jpeg';
+import KimDrinks from "../../images/kim_drinks.jpeg";
 
 export const ContactForm = () => {
   const onSubmit = async (event) => {
@@ -31,34 +31,34 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className='contact__container'>
-    <div className='img__positioning'>
-    <img src={KimDrinks} width='300' height='400'/>
+    <div className="contact__container">
+      <div className="img__positioning">
+        <img src={KimDrinks} width="300" height="400" />
 
-    <form onSubmit={onSubmit}>
-      <div className="contact__title">
-        <div className="title__contact">Contact Us</div>
-        <div className="title__msg">We will get back to you asap!</div>
+        <form onSubmit={onSubmit}>
+          <div className="contact__title">
+            <div className="title__contact">Contact Us</div>
+            <div className="title__msg">We will get back to you asap!</div>
+          </div>
+          <div className="contact__info">
+            <div className="contact__name">
+              <label>Name</label>
+              <input type="text" name="name" />
+            </div>
+            <div className="contact__email">
+              <label>Email</label>
+              <input type="email" name="email" />
+            </div>
+          </div>
+          <div className="contact__message">
+            <label>Message</label>
+            <textarea name="message"></textarea>
+          </div>
+          <button className="contact__submit" type="submit">
+            Submit Form
+          </button>
+        </form>
       </div>
-      <div className="contact__info">
-        <div className="contact__name">
-          <label>Name</label>
-          <input type="text" name="name" />
-        </div>
-        <div className="contact__email">
-          <label>Email</label>
-          <input type="email" name="email" />
-        </div>
-      </div>
-      <div className="contact__message">
-        <label>Message</label>
-        <textarea name="message"></textarea>
-      </div>
-      <button className="contact__submit" type="submit">
-        Submit Form
-      </button>
-    </form>
-    </div>
     </div>
   );
 };
