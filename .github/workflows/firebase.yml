@@ -15,7 +15,8 @@ jobs:
         run: npm install
         working-directory: sweetpress-frontend
       - name: Build
-        run: npm run build-prod
+        run: npm run build
+        working-directory: sweetpress-frontend
       - name: Archive Production Artifact
         uses: actions/upload-artifact@main
         with:
