@@ -37,7 +37,7 @@ const Footer = () => {
             href="https://www.instagram.com/sweetpress.sugarcane/"
             className="instagramSocial"
           >
-            <FontAwesomeIcon icon={faYelp} size="2x" color="red" />
+            <FontAwesomeIcon icon={faFacebook} size="2x" color="white" />
           </a>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./ContactForm.css";
-import { CONTACT_API_KEY } from "./ContactApiKey";
+// import { CONTACT_API_KEY } from "./ContactApiKey";
 import KimDrinks from "../../images/kim_drinks.jpeg";
 
 export const ContactForm = () => {
@@ -9,7 +9,7 @@ export const ContactForm = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", CONTACT_API_KEY);
+    // formData.append("access_key", CONTACT_API_KEY);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
