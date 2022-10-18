@@ -21,6 +21,7 @@
   flex-wrap: wrap;
   align-items: center;
   margin: 40px;
+  position:relative;
 }
 
 .menu_title {
@@ -30,11 +31,42 @@
   color: rgb(37, 37, 37);
 }
 
+.menu_title_opacity {
+  font-size: 60px;
+  margin: 0px;
+  font-weight: bold;
+  color: rgb(37, 37, 37);
+  opacity:0.4;
+}
+
+
 .menu_btn {
   background-color: black;
   color: white;
   padding: 15px;
   border-radius: 20px;
+  /* opacity:0.4; */
+}
+
+.btn__text {
+  color:white;
+  text-decoration:none;
+}
+
+.btn__text:hover {
+  text-decoration:none;
+}
+
+.file__size {
+  font-size:12px;
+}
+
+.menu_btn_opacity {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+  opacity:0.4;
 }
 
 .menu_image {
@@ -43,6 +75,23 @@
   justify-content: center;
 }
 
+.soon {
+  font-size:40px;
+  font-weight:bold;
+  border:8px solid black;
+  padding:8px;
+    -webkit-transform: rotate(10deg); 
+  -moz-transform: rotate(10deg);
+}
+
+.coming__soon {
+  position:absolute;
+  bottom:0;
+  left:50;
+  /* -webkit-transform: rotate(10deg);  */
+  /* -moz-transform: rotate(10deg); */
+  z-index:2;
+}
 .positioning {
   display: flex;
   flex-direction: row;
@@ -52,4 +101,24 @@
 .about_info {
   width: 600px;
   margin: auto;
+}
+
+.title__container {
+  background:linear-gradient(
+    to bottom,
+    #FA8072,
+    rgb(255, 255, 255) );
+  position:relative;
+  top:-30px;
+  border-radius:20px;
+  padding:10px;
+}
+.bg__img {
+  background-image: url(../images/cane.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  width:100%;
+  /* opacity:0.7; */
 }

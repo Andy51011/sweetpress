@@ -1,7 +1,5 @@
 import React from 'react';
 import Footer from '../components/footer/Footer';
-import Sophia from '../images/sophia.jpeg';
-import Andy from '../images/andy.jpeg';
 import './Pages.css'
 
 const About = () => {
@@ -9,13 +7,17 @@ const About = () => {
     return (
         <div>
             <div className='about_container'>
+            <div className='bg__img'>
+            </div>
+            <div className='title__container'>
             <h2 className='menu_title'>OUR TEAM</h2>
+            </div>
             <div className='positioning'>
             <div className='RD'>
                 <h2>R&D</h2>
                 <h5>Sophia Feng</h5>
                 <p>lacking R&D specialist</p>
-                <img src={Sophia} width='300px' height='300px' />
+                
             </div>
             <div className='about_info'>
             <p>
@@ -33,7 +35,7 @@ const About = () => {
                 <h2>juicer</h2>
                 <h5>Andy Yuen</h5>
                 <p>Lead Juicer</p>
-                <img src={Andy} width='300px' height='300px' />
+                
             </div>
             </div>
             </div>
